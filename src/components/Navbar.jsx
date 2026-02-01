@@ -1,6 +1,7 @@
  import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
+import logoimg from './../assets/chat-messages-front-side-white-background.jpg'
 
 
 function Navbar(props) {
@@ -8,7 +9,7 @@ function Navbar(props) {
         <>
         <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">{props.title}</Link>
+          <Link className="navbar-brand" to="/"><img src={logoimg} alt="log" width="50px" height="50px" /></Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span> 
           </button>
