@@ -1,8 +1,13 @@
 import React from "react";
 
-function Login() {
+function Login(props) {
+
+    const themeStyle = {
+        backgroundColor: props.mode === "dark" ? "#1e1e2f" : "#f8f9fa",
+        color: props.mode === "dark" ? "#ffffff" : "#000000",
+    };
     return (
-        <div className="container py-5">
+        <div className="container py-5" style={themeStyle}>
 
             {/* Page Header */}
             <div className="text-center mb-5">

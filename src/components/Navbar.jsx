@@ -27,7 +27,7 @@ function Navbar(props) {
                 <Link className="nav-link" to="/Service">Service</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Contact">Contct</Link>
+                <Link className="nav-link" to="/Textform">Textform</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/Testmonial">Testmonial</Link>
@@ -39,8 +39,9 @@ function Navbar(props) {
                 <Link className="nav-link" to="/Login">Login</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/Textform">Textform</Link>
+                <Link className="nav-link" to="/Contact">Contct</Link>
               </li>
+              
             </ul>
 
             <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>

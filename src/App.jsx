@@ -37,7 +37,7 @@ function App() {
 const  toggleMode =()=>{
   if (mode==='light') {
     setMode('dark');
-    document.body.style.backgroundColor = '#042743';
+    document.body.style.backgroundColor = 'white';
     showAlert("dark mode has been enable","success");
     document.title = 'textapp-Dark Mode';
     // setInterval(() => {
@@ -63,14 +63,16 @@ const  toggleMode =()=>{
    <ALERT alert={alert}/>
    <Switch>
          <Route exact path="/"><HOME mode={mode} /></Route>
-          <Route path="/About"><ABOUT /></Route>
-          <Route path="/Blog"><BLOG /></Route>
-          <Route path="/Contact"><CONTACT /></Route>
-          <Route path="/Login"><LOGIN /></Route>
-          <Route path="/Register"><REGISTER /></Route>
-          <Route path="/Service"><SERVICE /></Route>
-          <Route path="/Testmonial"><TESTMONIAL /></Route>
+          <Route path="/About"><ABOUT mode={mode} /></Route>
+          <Route path="/Service"><SERVICE mode={mode} /></Route>
+          <Route path="/Blog"><BLOG mode={mode} /></Route>
+          <Route path="/Testmonial"><TESTMONIAL mode={mode} /></Route>
           <Route path="/Textform"><TESTFORM mode={mode} showAlert={showAlert} heading="enter the text to analyze below" /></Route>
+          <Route path="/Contact"><CONTACT mode={mode} /></Route>
+          <Route path="/Login"><LOGIN mode={mode} /></Route>
+          <Route path="/Register"><REGISTER mode={mode} /></Route>
+          
+          
       </Switch>
     </Router>
   );

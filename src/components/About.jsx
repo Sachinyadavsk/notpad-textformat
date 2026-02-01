@@ -1,32 +1,16 @@
 import React, { useState } from "react";
 
-function About() {
-    const [mtStyle, setMtStyle] = useState({
-        color: "black",
-        backgroundColor: "white",
-    });
+function About(props) {
 
-    const [btnText, setBtnText] = useState("Enable Dark Mode");
-
-    const toggleStyle = () => {
-        if (mtStyle.color === "black") {
-            setMtStyle({
-                color: "white",
-                backgroundColor: "#121212",
-            });
-            setBtnText("Enable Light Mode");
-        } else {
-            setMtStyle({
-                color: "black",
-                backgroundColor: "white",
-            });
-            setBtnText("Enable Dark Mode");
-        }
+    // 🎨 THEME COLORS
+    const themeStyle = {
+        backgroundColor: props.mode === "dark" ? "#1e1e2f" : "#f8f9fa",
+        color: props.mode === "dark" ? "#ffffff" : "#000000",
     };
 
     return (
         <>
-            <div className="container py-5" style={mtStyle}>
+            <div className="container py-5" style={themeStyle}>
                 <div className="row g-4">
 
                     {/* Column 1 */}
@@ -77,15 +61,7 @@ function About() {
                 </div>
             </div>
 
-            {/* Toggle Button */}
-            <div className="container text-center mb-4">
-                <button
-                    className="btn btn-primary px-4"
-                    onClick={toggleStyle}
-                >
-                    {btnText}
-                </button>
-            </div>
+
         </>
     );
 }
